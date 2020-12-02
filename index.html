@@ -2,68 +2,43 @@
 <html>
 <head>
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--viewport로 설정해주면 어느 디바이스에서든지 최적화된 크기로 표현하여 보기좋은 화면을 표시해줌-->
+     <link rel="stylesheet" type="text/css" href="http://localhost/html/style2.css">
      <title>생활코딩</title>
-    
+    <style>
+      a{
+      color:black;
+      text-decoration: none;
+    }
+     .saw{
+       color:gray;
+     }
+
+    </style>
+    <!-- class 를 실행시키려고 하면 style 내용안에 앞에 .을 꼭 붙여줘야함
+    a는 태그, .은 클래스, #은 id인데, style 작성시에 맨 밑에 작성할수록 파워가 쎄져서 같은 태그를 사용한다고 하면
+    맨 밑에 사용한 것이 위에 사용한것을 덮을 수 있음. BUT 순서 상관없이 id -> class-> 태그 순으로 힘이 쎄기 때문에 id는 위에 써줘도 덮히지 않음.
+     -->
 </head>
-     <body id="target">
-<body>
-  <style>
-  #control{
-float:right;
-}
-body.black{
-  background-color:black;
-  color:white;
-}
-body.white{
-  background-color:white;
-  color:black;
-}
-header{
-  border-bottom:1px solid gray;
-  padding:20px;
-}
-nav {
-  border-right:1px solid gray;
-  width:200px;
-  height:600px;
-  float:left;
-}
-nav ol{
-  list-style:none;
-}
-article{
-  float:left;
-  padding:20px;
-}
-h2{
-  font-size:50px;
-}
-header img{
-  float:right
-}
-  </style>
-     
-      <header>
-        <h1><a href="http://mjyoo0353.github.io/web1/">JavaScript</a></h1>
+<body id="target">
+    <header>
+        <h1><a href="http://localhost/html/" class="active"><span class="java-highlight">JavaScript</span></a></h1>
     </header>
     <nav>
         <ol>
-        <li><a href="http://mjyoo0353.github.io/web1/page_javascript.html">JavaScript란?</a></li>
-        <li><a href="http://mjyoo0353.github.io/web1/page_vc.html">변수와 상수</a></li>
-        <li><a href="http://mjyoo0353.github.io/web1/page_op.html">연산자</a></li>
-        </ol>
+        <li><a href="http://localhost/html/page_javascript.html" class="saw">JavaScript란?</a></li>
+        <li><a href="http://localhost/html/page_vc.html" class="saw" active>변수와 상수</a></li>
+        <li><a href="http://localhost/html/page_op.html" class="saw">연산자</a></li>
     </nav>
-     
-     <div id="control">
-     <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
-     <input type="button" value="black" onclick="document.getElementById('target').className='black'"/>
-     </div>
-     
-     <article>
-          <h1>안녕하세요!</h1>
-          목차를 클릭해보세요. 오른쪽에 있는 Black을 누르면 화면 색이 바뀝니다.
-     </article>
+    <div id="control">
+    <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
+    <input type="button" value="black" onclick="document.getElementById('target').className='black'"/>
+    </div>
 
+<article>
+  안녕하세요.<br/>
+  JavaScript 페이지에 오신 것을 환영합니다.
+</article>
 </body>
 </html>
